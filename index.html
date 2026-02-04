@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <canvas id="bg-canvas" aria-hidden="true"></canvas>
+    
+    <!-- Hamburger Menu Icon -->
+    <button id="hamburgerBtn" class="hamburger-menu" aria-label="Toggle navigation menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+    </button>
+
+    <!-- Side Navigation Panel -->
+    <nav id="sideNav" class="side-nav">
+        <div class="nav-header">
+            <h2>Menu</h2>
+            <button id="closeNavBtn" class="nav-close" aria-label="Close navigation menu">&times;</button>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="sdg-goals.html">SDG Goals</a></li>
+            <li><a href="expert-opinion.html">Expert Opinion</a></li>
+            <li><a href="support-resources.html">Support Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+    </nav>
+
+    <!-- Navigation Overlay -->
+    <div id="navOverlay" class="nav-overlay"></div>
+    
+    <!-- Welcome Popup Modal -->
+    <div id="welcomeModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close popup">&times;</button>
+            <div class="modal-header">
+                <h1>Mental Health for Students</h1>
+            </div>
+            <div class="modal-body">
+                <section class="goal-section">
+                    <h2>Goal: Promoting Mental Health and Well-Being</h2>
+                    
+                    <p class="goal-intro">Our mission is to ensure students are emotionally healthy, resilient, and capable of managing academic, social, and personal challenges. We're committed to building a <strong>supportive, inclusive, and stigma-free environment</strong> where students feel safe to express their emotions and seek help without fear.</p>
+                    
+                    <div class="goal-highlights">
+                        <div class="highlight-item">
+                            <h3>Mental Health Awareness</h3>
+                            <p>We focus on understanding and addressing stress, anxiety, depression, and burnout. Through early identification and timely support, we help students recognize warning signs and access the help they need.</p>
+                        </div>
+                        
+                        <div class="highlight-item">
+                            <h3>Essential Life Skills Development</h3>
+                            <p>We develop critical skills including emotional regulation, self-confidence, mindfulness, and stress management. These skills directly contribute to academic success and personal growth, enabling students to thrive in all areas of life.</p>
+                        </div>
+                        
+                        <div class="highlight-item">
+                            <h3>Resource Access & Support Systems</h3>
+                            <p>Our goal is to improve access to mental health resources, guidance, and peer support systems. We ensure no student feels isolated or unheard by providing comprehensive support networks and professional assistance.</p>
+                        </div>
+                    </div>
+                    
+                    <p class="goal-conclusion">By promoting mental health and well-being, we create a compassionate educational community that fosters healthier individuals, better learning outcomes, and reduced inequalities. Together, we build a productive environment where every student can succeed.</p>
+                </section>
+            </div>
+            <div class="modal-footer">
+                <button class="primary-btn modal-action-btn" id="closeModalBtn">Get Started</button>
+            </div>
+        </div>
+    </div>
+
+    <header id="home">
+        <div class="hero">
+            <div class="hero-text">
+                <h1>Mental Health</h1>
+                <p class="subtitle">A calm mind is a strong mind. Explore insights, take a quick check-in, and build healthier habits.</p>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <span class="stat-value">Live</span>
+                    <span class="stat-label">Survey Insights</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value">15</span>
+                    <span class="stat-label">Quick Questions</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value">3</span>
+                    <span class="stat-label">Well-being Zones</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="page">
+        <section id="graphs" class="section-card">
+            <h2>Survey Results Graphs</h2>
+            <p class="muted">Live visual summaries based on the provided survey data.</p>
+            <div class="graph-grid">
+                <div class="graph-card">
+                    <h3>Age Distribution</h3>
+                    <canvas id="ageChart" width="420" height="260"></canvas>
+                </div>
+                <div class="graph-card">
+                    <h3>Gender Split</h3>
+                    <canvas id="genderChart" width="420" height="260"></canvas>
+                </div>
+                <div class="graph-card">
+                    <h3>Study Level</h3>
+                    <canvas id="studyChart" width="420" height="260"></canvas>
+                </div>
+                <div class="graph-card">
+                    <h3>Stress Frequency</h3>
+                    <canvas id="stressChart" width="420" height="260"></canvas>
+                </div>
+            </div>
+        </section>
+        <section id="survey-info" class="section-card">
+            <h2>Demographic Profile</h2>
+            <p>Age: Majority of respondents are 21–25 years (40.4%), followed by 18–21 (24.7%) and 16–18 (19.9%). A smaller group is above 25 (11.6%), with minimal participation under 16.</p>
+            <p>Gender: Nearly balanced participation with Females (51.4%) and Males (48.6%).</p>
+            <p>Level of Study: Respondents are mainly School students (28.1%), Undergraduates (26%), and Postgraduates (26%), followed by Engineering students (14.4%). Medical and PhD students form a very small proportion.</p>
+            <div class="section-card info-card">
+                <h2>Mental Health</h2>
+                <p class="muted">Mental health is about how we think, feel, and cope with everyday life. Small daily choices—sleep, movement, connection, and mindful breaks—can create big, positive changes over time.</p>
+            </div>
+            <h2>Take Your Test</h2>
+            <a class="primary-btn" href="assessment.html">Take your test</a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Raghul Krishna - 2026</p>
+    </footer>
+</body>
+</html>
